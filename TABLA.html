@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabla sincronizada con Google Sheets</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <table id="tabla-datos"></table>
+
+  <script>
+    // ID de la hoja de Google Sheets
+    var sheetId = '1gYYjtuq5ZOEt7lRwI7iXjnD7ZSiPbSsN0h-848-pZDI';
+
+    // Rango de celdas que quieres obtener (por ejemplo, 'Sheet1!A1:D10')
+    var range = 'punto!B2:E100';
+
+    // API de Google Sheets
+    var apiKey = 'AIzaSyDO2uPnoBhPzXVzAFFTA2OJou5zyW35VV4';
+    var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values/' + range + '?key=' + apiKey;
+
+    // Obtener los datos de Google Sheets
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        var table = document.getElementById('tabla-datos');
+
+        // Crear la cabecera de la tabla
+        var headerRow = document.createElement('tr');
+        data.values[0].forEach(header => {
+          var th = document.createElement('th');
+          th.textContent = header;
+          headerRow.appendChild(th);
+        });
+        table.appendChild(headerRow);
+
+        // Crear las filas de datos
+        for (var i = 1; i < data.values.length; i++) {
+          var rowData = data.values[i];
+          var row = document.createElement('tr');
+          rowData.forEach(cellData => {
+            var td = document.createElement('td');
+            td.textContent = cellData;
+            row.appendChild(td);
+          });
+          table.appendChild(row);
+        }
+      })
+      .catch(error => {
+        console.error('Error al obtener los datos:', error);
+      });
+  </script>
+</body>
+</html>
+

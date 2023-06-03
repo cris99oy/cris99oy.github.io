@@ -1,0 +1,186 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: silver;
+  margin: 0;
+}
+
+.header {
+  background: #0F2026;
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  
+
+}
+.header a {
+  color: rgb(189, 187, 187);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+
+  width: 95%;
+  max-width: 1040px;
+  margin: 0 auto;
+  
+}
+
+.logo-nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  flex-wrap: wrap;
+
+}
+
+
+.logo {
+  width: auto;
+  height: 100px;
+    
+}
+
+.menu-icon {
+  display: none;
+}
+
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+  .navigation ul li {
+    display: inline-block;
+  }
+
+    .navigation ul li a {
+      display: block;
+      padding: 10px 20px;
+      transition: all 0.3s linear;
+      border-radius: 5px;
+    }
+
+      .navigation ul li a:hover {
+        color: white;
+      }
+
+.main {
+  padding-top: 120px;
+}
+
+
+.form_searchbar {
+  display: block;
+    margin-top: 0em;
+}
+
+.form_control {
+  margin-bottom: 0.5rem!important;
+  width: 100%!important;
+  border-radius: 0!important;
+  display: block;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  overflow: visible;
+  margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  box-sizing: border-box;
+
+
+
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.cabesa_tabla { 
+    
+    
+}
+  
+th, td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid rgb(74, 102, 109);
+}
+  
+th {
+    background-color: rgb(2,119,189);
+    color: white;
+    
+  }
+  td {
+    background-color: #f2f2f2;
+}
+
+h1 {
+    max-width: 100%;
+    margin-top: 0px;
+    
+}
+
+.footer {
+  background: #a3a3a3;
+  padding: 30px 0;
+  text-align: center;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 700px) {
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    padding: 10px 20px;
+  }
+  
+  .navigation {
+    width: 100%;
+    margin-top: 10px;
+
+  }
+
+    .navigation ul {
+      display: none;
+    }
+
+    .navigation ul.show {
+      display: block;
+    }
+  
+    .navigation ul li {
+      display: block;
+    }
+  
+      .navigation ul li a {
+        display: block;
+        padding: 10px 0;
+        transition: all 0.3s linear;
+        border-radius: 5px;
+      }
+  
+        .navigation ul li a:hover {
+          color: white;
+        }
+
+}
