@@ -18,16 +18,54 @@
       background-color: #f2f2f2;
     }
   </style>
+  <link rel="stylesheet"
+  href="style.css">
+  <meta charset="utf-8">
 </head>
 <body>
-  <table id="tabla-datos"></table>
+  <header class="header">
+    <div class="container logo-nav-container">
+        <a href="index.html" class="logo">
+            <img class="logo" src="/images/logo.gif">
+        </a>
+        <span class="menu-icon"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-article-filled-filled" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M19 3a3 3 0 0 1 2.995 2.824l.005 .176v12a3 3 0 0 1 -2.824 2.995l-.176 .005h-14a3 3 0 0 1 -2.995 -2.824l-.005 -.176v-12a3 3 0 0 1 2.824 -2.995l.176 -.005h14zm-2 12h-10l-.117 .007a1 1 0 0 0 0 1.986l.117 .007h10l.117 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm0 -4h-10l-.117 .007a1 1 0 0 0 0 1.986l.117 .007h10l.117 -.007a1 1 0 0 0 0 -1.986l-.117 -.007zm0 -4h-10l-.117 .007a1 1 0 0 0 0 1.986l.117 .007h10l.117 -.007a1 1 0 0 0 0 -1.986l-.117 -.007z" stroke-width="0" fill="currentColor" />
+            </svg></span>
+        <nav class="navigation">
+            <ul >
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="TABLA.html">Ayuda</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+        </nav>
+        
+    </div>
+</header>
+  <main class="main">
+    <div class="container">
+      <form method="get">
+        <div class="form_searchbar">
+          <input class="form_control" type="text" id="search-input" placeholder="Buscar...">
+        </div>
+      </form>
+      <div class="cabesa">
+        <table id="tabla-datos"></table>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+        <p>Copyright © 2023 derechos reservados</p>
+    </div>
+  </footer>
 
   <script>
     // ID de la hoja de Google Sheets
     var sheetId = '1gYYjtuq5ZOEt7lRwI7iXjnD7ZSiPbSsN0h-848-pZDI';
 
     // Rango de celdas que quieres obtener (por ejemplo, 'Sheet1!A1:D10')
-    var range = 'punto!B2:E100';
+    var range = 'modelos!B2:M200';
 
     // API de Google Sheets
     var apiKey = 'AIzaSyDO2uPnoBhPzXVzAFFTA2OJou5zyW35VV4';
@@ -38,6 +76,37 @@
       .then(response => response.json())
       .then(data => {
         var table = document.getElementById('tabla-datos');
+        var searchInput = document.getElementById('search-input');
+
+        // Función para filtrar la tabla basado en la búsqueda
+        function filtrarTabla() {
+          var filtro = searchInput.value.toLowerCase();
+          var rows = table.getElementsByTagName('tr');
+
+          for (var i = 1; i < rows.length; i++) {
+            var rowData = data.values[i];
+            var row = rows[i];
+
+            var encontrado = false;
+
+            for (var j = 0; j < rowData.length; j++) {
+              var cellData = rowData[j].toLowerCase();
+              if (cellData.includes(filtro)) {
+                encontrado = true;
+                break;
+              }
+            }
+
+            if (encontrado) {
+              row.style.display = '';
+            } else {
+              row.style.display = 'none';
+            }
+          }
+        }
+
+        // Agregar evento de escucha al campo de búsqueda
+        searchInput.addEventListener('input', filtrarTabla);
 
         // Crear la cabecera de la tabla
         var headerRow = document.createElement('tr');
