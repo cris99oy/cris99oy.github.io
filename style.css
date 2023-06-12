@@ -1,6 +1,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: silver;
+  
   margin: 0;
 }
 
@@ -75,6 +76,7 @@ body {
 }
 
 
+
 .form_searchbar {
   display: block;
     margin-top: 0em;
@@ -104,7 +106,7 @@ body {
     line-height: inherit;
   box-sizing: border-box;
 
-
+  
 
 
 }
@@ -112,6 +114,7 @@ body {
 table {
     border-collapse: collapse;
     width: 100%;
+    
 }
 
 .cabesa_tabla { 
