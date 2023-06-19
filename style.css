@@ -123,10 +123,7 @@ table {
     
 }
 
-.cabesa_tabla { 
-    
-    
-}
+
   
 th, td {
     padding: 8px;
@@ -158,7 +155,7 @@ kbd {
   color: #fff;
   display: inline-block;
   border-radius: 4px;
-  padding: 4px 8px;
+  padding: 3px 5px;
   font-weight: 700;
   font-size: 75%;
   line-height: 1;
