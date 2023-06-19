@@ -75,7 +75,13 @@ body {
   padding-top: 120px;
 }
 
-
+.btn {
+  display: flexbox;
+  border-radius: 4px;
+  padding: 4px 8px;
+  
+  
+}
 
 .form_searchbar {
   display: block;
@@ -126,6 +132,7 @@ th, td {
     padding: 8px;
     text-align: left;
     border: 1px solid rgb(74, 102, 109);
+    
 }
   
 th {
@@ -135,6 +142,77 @@ th {
   }
   td {
     background-color: #f2f2f2;
+    
+}
+
+kbd {
+  padding: 0.2rem 0.4rem;
+  
+  color: #fff;
+  background-color: #212529;
+  border-radius: 0.2rem;
+}
+
+.proceso {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-weight: 700;
+  font-size: 75%;
+  line-height: 1;
+  white-space: nowrap;  
+}
+
+.proceso1 {
+  color: #ffffff; /* Color de texto blanco */
+  background-color: #178d17; /* Color de fondo rojo */
+}
+
+.proceso2 {
+  color: #ffffff; /* Color de texto negro */
+  background-color: #1e6ed6; /* Color de fondo verde */
+}
+
+.proceso3 {
+  color: #ffffff; /* Color de texto negro */
+  background-color: #a84133; /* Color de fondo amarillo */
+}
+
+.proceso4 {
+  color: #ffffff; /* Color de texto negro */
+  background-color: #969492; /* Color de fondo amarillo */
+}
+
+.proceso5 {
+  color: #ffffff; /* Color de texto blanco */
+  background-color: #d6b316; /* Color de fondo azul */
+}
+
+.proceso6 {
+  color: #ffffff; /* Color de texto negro */
+  background-color: #067a8f; /* Color de fondo amarillo */
+}
+
+.proceso7 {
+  color: #ffffff; /* Color de texto negro */
+  background-color: #0cb1c7; /* Color de fondo amarillo */
+}
+
+.proceso8 {
+  color: #ffffff; /* Color de texto negro */
+  background-color: #e29494; /* Color de fondo amarillo */
+}
+
+.proceso9 {
+  color: #ffffff; /* Color de texto negro */
+  background-color: #797979; /* Color de fondo amarillo */
+}
+
+.proceso10 {
+  color: #ffffff; /* Color de texto negro */
+  background-color: #797979; /* Color de fondo amarillo */
 }
 
 h1 {
