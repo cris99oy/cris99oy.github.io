@@ -45,9 +45,7 @@ body {
     
 }
 
-.menu-icon {
-  display: none;
-}
+
 
 .navigation ul {
   margin: 0;
@@ -75,13 +73,41 @@ body {
   padding-top: 120px;
 }
 
-.btn {
-  display: flexbox;
-  border-radius: 4px;
-  padding: 4px 8px;
+
+
+.justify-content-center {
   
-  
+  justify-content: center;
 }
+.d-flex {
+  
+  display: flex;
+}
+
+.col-12 {
+  
+  height: auto;
+  
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.btn {
+  padding: 3px 5px;
+  display: flex;
+  width: 100px;
+  border-radius: 4px;
+  background-color: #82858475;
+  border: solid 1px;
+  border-color: silver;
+}
+
+.btn img {
+  
+  align-content: center;
+  align-self: center ;
+}
+
 
 .form_searchbar {
   display: block;
@@ -123,7 +149,6 @@ table {
     
 }
 
-
   
 th, td {
     padding: 8px;
@@ -155,7 +180,7 @@ kbd {
   color: #fff;
   display: inline-block;
   border-radius: 4px;
-  padding: 3px 5px;
+  padding: 4px 8px;
   font-weight: 700;
   font-size: 75%;
   line-height: 1;
@@ -223,42 +248,4 @@ h1 {
   padding: 30px 0;
   text-align: center;
   margin-top: 50px;
-}
-
-@media only screen and (max-width: 700px) {
-  .menu-icon {
-    display: block;
-    cursor: pointer;
-    padding: 10px 20px;
-  }
-  
-  .navigation {
-    width: 100%;
-    margin-top: 10px;
-
-  }
-
-    .navigation ul {
-      display: none;
-    }
-
-    .navigation ul.show {
-      display: block;
-    }
-  
-    .navigation ul li {
-      display: block;
-    }
-  
-      .navigation ul li a {
-        display: block;
-        padding: 10px 0;
-        transition: all 0.3s linear;
-        border-radius: 5px;
-      }
-  
-        .navigation ul li a:hover {
-          color: white;
-        }
-
 }
