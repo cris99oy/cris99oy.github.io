@@ -249,3 +249,22 @@ h1 {
   text-align: center;
   margin-top: 50px;
 }
+
+.polis {
+  padding: 0 10px ;
+  display: flex;
+  text-align: center;
+}
+.col-sm {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * .5);
+  padding-left: calc(var(--bs-gutter-x) * .5);
+  margin-top: var(--bs-gutter-y);
+  flex: 1 0 0%;
+}
+
+.text-center {
+  text-align: center;
+}
