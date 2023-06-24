@@ -59,6 +59,9 @@
                     </div>
                   </div>
                 </div>
+                
+                  
+                
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6386264592853721"
                   crossorigin="anonymous"></script>
               <!-- anuncio baner -->
@@ -78,8 +81,8 @@
 
                 </form>
 
-                <div class="cabesa">
-
+                <div>
+                    
                     <table id="tabla-datos"></table>
 
                 </div>
@@ -87,7 +90,7 @@
             </div>
             
             <div>
-
+              
             </div>
             <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6386264592853721"
               crossorigin="anonymous"></script>
@@ -125,93 +128,93 @@
             var apiKey = 'AIzaSyDO2uPnoBhPzXVzAFFTA2OJou5zyW35VV4';
             var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values/' + range + '?key=' + apiKey;
 
-    // Obtener los datos de Google Sheets
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        var table = document.getElementById('tabla-datos');
-        var searchInput = document.getElementById('search-input');
+            // Obtener los datos de Google Sheets
+            fetch(url)
+            .then(response => response.json())
+            .then(data => {
+              var table = document.getElementById('tabla-datos');
+              var searchInput = document.getElementById('search-input');
 
-        // Función para filtrar la tabla basado en la búsqueda
-        function filtrarTabla() {
-          var filtro = searchInput.value.toLowerCase();
-          var rows = table.getElementsByTagName('tr');
+              // Función para filtrar la tabla basado en la búsqueda
+              function filtrarTabla() {
+                var filtro = searchInput.value.toLowerCase();
+                var rows = table.getElementsByTagName('tr');
 
-          for (var i = 1; i < rows.length; i++) {
-            var rowData = data.values[i];
-            var row = rows[i];
+                for (var i = 1; i < rows.length; i++) {
+                  var rowData = data.values[i];
+                  var row = rows[i];
 
-            var encontrado = false;
+                  var encontrado = false;
 
-            for (var j = 0; j < rowData.length; j++) {
-              var cellData = rowData[j].toLowerCase();
-              if (cellData.includes(filtro)) {
-                encontrado = true;
-                break;
+                  for (var j = 0; j < rowData.length; j++) {
+                    var cellData = rowData[j].toLowerCase();
+                    if (cellData.includes(filtro)) {
+                      encontrado = true;
+                      break;
+                    }
+                  }
+
+                  if (encontrado) {
+                    row.style.display = '';
+                  } else {
+                    row.style.display = 'none';
+                  }
+                }
               }
-            }
 
-            if (encontrado) {
-              row.style.display = '';
-            } else {
-              row.style.display = 'none';
-            }
-          }
-        }
+              // Agregar evento de escucha al campo de búsqueda
+              searchInput.addEventListener('input', filtrarTabla);
 
-        // Agregar evento de escucha al campo de búsqueda
-        searchInput.addEventListener('input', filtrarTabla);
+              // Crear la cabecera de la tabla
+              var headerRow = document.createElement('tr');
+              data.values[0].forEach(header => {
+                var th = document.createElement('th');
+                th.textContent = header;
+                headerRow.appendChild(th);
+              });
+              table.appendChild(headerRow);
 
-        // Crear la cabecera de la tabla
-        var headerRow = document.createElement('tr');
-        data.values[0].forEach(header => {
-          var th = document.createElement('th');
-          th.textContent = header;
-          headerRow.appendChild(th);
-        });
-        table.appendChild(headerRow);
+              // Crear las filas de datos
+              for (var i = 1; i < data.values.length; i++) {
+                var rowData = data.values[i];
+                var row = document.createElement('tr');
 
-        // Crear las filas de datos
-        for (var i = 1; i < data.values.length; i++) {
-          var rowData = data.values[i];
-          var row = document.createElement('tr');
+                // Crear la primera columna
+                var columna1 = document.createElement('td');
+                columna1.textContent = rowData[0];
+                row.appendChild(columna1);
 
-          // Crear la primera columna
-          var columna1 = document.createElement('td');
-          columna1.textContent = rowData[0];
-          row.appendChild(columna1);
+                // Crear la segunda columna
+                var columna2 = document.createElement('td');
+                columna2.textContent = rowData[1];
+                row.appendChild(columna2);
 
-          // Crear la segunda columna
-          var columna2 = document.createElement('td');
-          columna2.textContent = rowData[1];
-          row.appendChild(columna2);
+                // Crear la tercera columna con contenido dentro de <kbd>
+                var columna3 = document.createElement('td');
+                var kbd = document.createElement('kbd');
+                kbd.textContent = rowData[2];
+                columna3.appendChild(kbd);
+                row.appendChild(columna3);
 
-          // Crear la tercera columna con contenido dentro de <kbd>
-          var columna3 = document.createElement('td');
-          var kbd = document.createElement('kbd');
-          kbd.textContent = rowData[2];
-          columna3.appendChild(kbd);
-          row.appendChild(columna3);
+                // Crear la cuarta columna con el contenido de las demás celdas
+                var columna4 = document.createElement('td');
+                for (var j = 3; j < rowData.length; j++) {
+                  var a = document.createElement('a');
+                  a.textContent = rowData[j];
+                  a.classList.add('funcion' + (j - 2));
+                  a.classList.add('fun-gen');
+                  columna4.appendChild(a);
+                  
+                }
+                row.appendChild(columna4);
 
-          // Crear la cuarta columna con el contenido de las demás celdas
-          var columna4 = document.createElement('td');
-          for (var j = 3; j < rowData.length; j++) {
-            var a = document.createElement('a');
-            a.textContent = rowData[j];
-            a.classList.add('Proceso' + (j - 2));
-            a.classList.add('Proceso');
-            columna4.appendChild(a);
-            
-          }
-          row.appendChild(columna4);
-
-          table.appendChild(row);
-        }
-      })
-      .catch(error => {
-        console.error('Error al obtener los datos:', error);
-      });
-  </script>
+                table.appendChild(row);
+              }
+            })
+            .catch(error => {
+              console.error('Error al obtener los datos:', error);
+            });
+        </script>
       
         
     </body>

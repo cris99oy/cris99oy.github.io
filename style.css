@@ -175,7 +175,7 @@ kbd {
   border-radius: 0.2rem;
 }
 
-.proceso {
+.fun-gen {
   text-decoration: none;
   color: #fff;
   display: inline-block;
@@ -187,52 +187,52 @@ kbd {
   white-space: nowrap;  
 }
 
-.proceso1 {
+.funcion1 {
   color: #ffffff; /* Color de texto blanco */
   background-color: #178d17; /* Color de fondo rojo */
 }
 
-.proceso2 {
+.funcion2 {
   color: #ffffff; /* Color de texto negro */
   background-color: #1e6ed6; /* Color de fondo verde */
 }
 
-.proceso3 {
+.funcion3 {
   color: #ffffff; /* Color de texto negro */
   background-color: #a84133; /* Color de fondo amarillo */
 }
 
-.proceso4 {
-  color: #ffffff; /* Color de texto negro */
-  background-color: #9c9b99; /* Color de fondo amarillo */
-}
-
-.proceso5 {
-  color: #ffffff; /* Color de texto blanco */
-  background-color: #d6b316; /* Color de fondo azul */
-}
-
-.proceso6 {
-  color: #ffffff; /* Color de texto negro */
-  background-color: #067a8f; /* Color de fondo amarillo */
-}
-
-.proceso7 {
-  color: #ffffff; /* Color de texto negro */
-  background-color: #0cb1c7; /* Color de fondo amarillo */
-}
-
-.proceso8 {
+.funcion4 {
   color: #ffffff; /* Color de texto negro */
   background-color: #e29494; /* Color de fondo amarillo */
 }
 
-.proceso9 {
+.funcion5 {
+  color: #ffffff; /* Color de texto negro */
+  background-color: #0cb1c7; /* Color de fondo amarillo */
+}
+
+.funcion6 {
+  color: #ffffff; /* Color de texto negro */
+  background-color: #9c9b99; /* Color de fondo amarillo */
+}
+
+.funcion7 {
+  color: #ffffff; /* Color de texto blanco */
+  background-color: #d6b316; /* Color de fondo azul */
+}
+
+.funcion8 {
+  color: #ffffff; /* Color de texto negro */
+  background-color: #067a8f; /* Color de fondo amarillo */
+}
+
+.funcion9 {
   color: #ffffff; /* Color de texto negro */
   background-color: #797979; /* Color de fondo amarillo */
 }
 
-.proceso10 {
+.funcion10 {
   color: #ffffff; /* Color de texto negro */
   background-color: #797979; /* Color de fondo amarillo */
 }
