@@ -63,7 +63,7 @@ nav{
 }
 
   .enlaces-menu li {
-    padding: 0 40px;
+    padding: 10px 40px;
     list-style-type: none;
     transition: all 0.3s linear;
       border-radius: 5px;
@@ -73,29 +73,25 @@ nav{
     color: rgb(189, 187, 187);
     text-decoration: none;
     font-weight: 600;
-    /*transition: all 0.3s linear;
-      border-radius: 5px;*/
+    transition: all 0.3s linear;
+      border-radius: 5px;
     
       
     }
 
     .enlaces-menu li:hover {
-        background-color: #ffffff86;
-        color: white;
+        background-color: #4bbff534;
+        
       }
-/*
+
       .enlaces-menu li a:hover {
         
         color: white;
       }
-*/
+
 /* Dispositivos moviles*/
 
 @media (max-width:768px)  {
-
-  body{
-    overflow: hidden;
-  }
 
   .logo{
     padding-left: 25px;
@@ -138,6 +134,8 @@ nav{
     padding: 20px;
   }
 
+
+
 }
 
 @keyframes muestraMenu{
@@ -175,6 +173,24 @@ nav{
 .d-flex {
   
   display: flex;
+}
+
+.d-flex2 {
+  
+  display: none;
+}
+
+@media (max-width:768px) {
+
+  .d-flex {
+    display: none;
+  }
+
+  .d-flex2 {
+  
+    display: flex;
+  }
+
 }
 
 .col-12 {
