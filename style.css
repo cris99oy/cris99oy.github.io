@@ -134,7 +134,10 @@ nav{
     padding: 20px;
   }
 
+  .polis {
+    flex-direction: column;
 
+  }
 
 }
 
@@ -359,19 +362,16 @@ h1 {
 .polis {
   padding: 0 10px ;
   display: flex;
+
+  justify-content:center;
   text-align: center;
-}
-.col-sm {
-  flex-shrink: 0;
-  width: 100%;
-  max-width: 100%;
-  padding-right: calc(var(--bs-gutter-x) * .5);
-  padding-left: calc(var(--bs-gutter-x) * .5);
-  margin-top: var(--bs-gutter-y);
-  flex: 1 0 0%;
 }
 
-.text-center {
-  text-align: center;
-}
+.polis a {
+  color: rgb(34, 34, 34);
+  
+  padding: 5px 10px;
+  
+  }
+
 
