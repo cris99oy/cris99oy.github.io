@@ -6,7 +6,47 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Modelos soportados</title>
+        <style>
+          /* Estilos para ocultar todas las respuestas por defecto */
+          .respuesta {
+            display: none;
+          }
+        </style>
+        <style>
+          .preguntas {
+            display: flex;
+            flex-direction: column;
+          }
+          .respuesta {
+            display: none;
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(74, 102, 109);
+            padding-left: 30px;
+          }
+
+          .preguntas button {
+            text-align: start;
+            font-size: medium;
+            color: rgb(129, 194, 252);
+            padding: 10px;
+            border: 1px solid rgb(74, 102, 109);
+          }
+        </style>
+        <script>
+          function mostrarRespuesta(pregunta) {
+            // Oculta todas las respuestas
+            var respuestas = document.getElementsByClassName("respuesta");
+            for (var i = 0; i < respuestas.length; i++) {
+              respuestas[i].style.display = "none";
+            }
         
+            // Muestra la respuesta correspondiente a la pregunta seleccionada
+            var respuesta = document.getElementById(pregunta);
+            if (respuesta) {
+              respuesta.style.display = "block";
+            }
+          }
+        </script>
     </head>
     <body>
         <header class="header">
@@ -29,8 +69,8 @@
 
         <main class="main">
             <div class="container">
-                <div class="cuerpo">
-                  <div class="row m-3">
+              <div class="cuerpo">
+                <div class="row m-3">
                     <div class="col-12 d-flex justify-content-center btn-group-lg btn-group-horizontal">
                     <a href="?q=XIAOMI" class="btn btn-warning rounded-sm border"><img src="/images/Xiaomi.png" style="max-width:120px;width:100%"></a>
                     <a href="?q=SAMSUNG" class="btn btn-primary rounded-sm border"><img src="/images/samsung.png" style="max-width:120px;width:100%"></a>
@@ -60,43 +100,96 @@
                       <a href="?q=LG" class="btn btn-success rounded-sm border"><img src="/images/lg.png" style="max-width:120px;width:100%"></a>
                       <a href="?q=nokia" class="btn btn-dark rounded-sm border"><img src="/images/Nokia.png" style="max-width:120px;width:100%"></a>
                     </div>
+                </div>
+              </div>
+              <div>
+                <h3></h3>
+                <table>
+                  <tr>
+                    <th>Término</th>
+                    <th>Definición</th>
+                  </tr>
+                  <tr>
+                    <td>FRP</td>
+                    <td>Remover o quirtar el bloqueo FRP, cuenta google o Huawei ID </td>
+                  </tr>
+                  <tr>
+                    <td>F4</td>
+                    <td>Desbloqueo de linea movil</td>
+                  </tr>
+                  <tr>
+                    <td>BIT</td>
+                    <td>El # de binario que hay soporte de F4 en equipos samsung</td>
+                  </tr>
+                  <tr>
+                    <td>MDM</td>
+                    <td>hay soporte de para remover MDM</td>
+                  </tr>
+                  <tr>
+                    <td>KG LOCKET</td>
+                    <td>hay soporte de para remover KG LOCKET</td>
+                  </tr>
+                  <!-- Agrega más filas según necesites -->
+                </table>
+              </div>
+              
+              <div>
+                
+                <div class="preguntas" id="preguntas">
+                  <button onclick="mostrarRespuesta('pregunta1')"><strong>¿Que es FRP?</strong></button>
+                  <div id="pregunta1" class="respuesta">
+                    El bloqueo FRP es la protección de restablecimiento de fábrica en dispositivos Android que evita que extraños, ladrones y personas no deseadas accedan al dispositivo de un usuario. FRP incluso evita que alguien acceda a sus datos confidenciales restableciendo de fábrica su teléfono utilizando métodos inseguros.
                   </div>
+                  <button onclick="mostrarRespuesta('pregunta2')"><strong>¿Como puedo saber el binario de mi equipo samsung?</strong></button>
+                  <div id="pregunta2" class="respuesta">
+                    <p>Existen 3 formas de identificación o ver los Bit:</p> <img src="/images/binario.jpg" alt="">
+                    <p>1.-Mediante recovery.</p>
+                    <p>2.-En modo Download o descarga Odín</p> 
+                    <p>3.-Desde ajustes en la compilación del software, <a href="https://www.nicagsm.com/identificar-el-binario-samsung/">Mas</a></p>
+                  </div>
+                  <button onclick="mostrarRespuesta('pregunta3')"><strong>¿Como diferencia entre MDM y KG LOCKET?</strong></button>
+                  <div id="pregunta3" class="respuesta">
+                    Respuesta 3.
+                  </div>
+                  <!-- Agrega más preguntas y botones según necesites -->
                 </div>
                 
-                <form method="get">
-                    <h3></h3>
-                    <div class="form_searchbar">
-                        <input class="form_control mb-2 w-100 rounded-0" type="text" id="search-input" placeholder="Buscar modelo de telefono..." name="q" aria-label="Buscar">
-                        
-                    </div>
-
-                </form>
-
-                <div>
-                    
-                    <table id="tabla-datos"></table>
-
+                <div id="respuestas">
+                  
+                  
+                  
+                  <!-- Agrega más respuestas según necesites -->
                 </div>
+                
+                <script>
+                  function mostrarRespuesta(pregunta) {
+                    var respuesta = document.getElementById(pregunta);
+                    if (respuesta.style.display === "none") {
+                      respuesta.style.display = "block";
+                    } else {
+                      respuesta.style.display = "none";
+                    }
+                  }
+                </script>
+                
+              </div>
 
             </div>
             
-            <div>
-              
-            </div>
-            
+
         </main>
 
         <footer class="footer">
           <div class="container">
+            <div>
               <p>Copyright © 2023 derechos reservados</p>
-
+            </div>
+            <div class="polis">
+              <a href="poli_priv.html" target="_blank" rel="noreferrer noopener nofollow" itemprop="url"><span itemprop="name">Política de Privacidad</span></a>
+              <span class="separator">|</span>
+              <a href="poli_cokis.html" target="_blank" rel="noreferrer noopener nofollow" itemprop="url"><span itemprop="name">Política de Cookies</span></a>
+            </div>
           </div>
-          <nav class="polis" style="padding:10px 0;" itemscope="" itemtype="https://www.schema.org/SiteNavigationElement"> 
-              <div class="col-sm text-center"><a href="poli_priv.html" target="_blank" rel="noreferrer noopener nofollow" itemprop="url"><span itemprop="name">Política de Privacidad</span></a></div> 
-              <div class="col-sm-auto text-center d-none d-sm-block"><span class="separator">|</span></div> 
-              <div class="col-sm text-center"><a href="poli_cokis.html" target="_blank" rel="noreferrer noopener nofollow" itemprop="url"><span itemprop="name">Política de Cookies</span></a></div> 
-              
-          </nav>
       </footer>
 
         <script>
