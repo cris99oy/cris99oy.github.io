@@ -7,12 +7,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Modelos soportados</title>
         <style>
-          /* Estilos para ocultar todas las respuestas por defecto */
-          .respuesta {
-            display: none;
-          }
-        </style>
-        <style>
           .contenedor-imagenes {
             display: flex;
             flex-wrap: wrap;
@@ -34,8 +28,10 @@
 
           .preguntas {
             display: flex;
+            
             flex-direction: column;
           }
+          /* Estilos para ocultar todas las respuestas por defecto */
           .respuesta {
             display: none;
             background-color: rgb(255, 255, 255);
@@ -45,6 +41,7 @@
 
           .preguntas button {
             font-weight: bold;
+            cursor: pointer;
             font-style: italic;
             text-align: start;
             font-size: medium;
@@ -70,6 +67,7 @@
         </script>
     </head>
     <body>
+        <div class="barra-header"></div>
         <header class="header">
           <nav class="navigation">
             <a href="/">
