@@ -366,21 +366,7 @@ kbd {
   background-color: #797979; /* Color de fondo amarillo */
 }
 
-@media (max-width:768px){
-  th, td {
-    padding: 5px;
-    text-align: left;
-    border: 1px solid rgb(74, 102, 109);
-    
-}
 
-.container {
-  width: 98%;
-  max-width: 1040px;
-  margin: 0 auto;
-  
-}
-}
 
 h1 {
     max-width: 100%;
