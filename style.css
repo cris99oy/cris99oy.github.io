@@ -117,7 +117,7 @@ nav{
 
   .enlaces-menu {
     flex-direction: column;
-    justify-content: space-around;
+    justify-content:start;
     align-items: center;
     height: 92vh;
     padding: 0;
@@ -132,6 +132,10 @@ nav{
     width: 100%;
     text-align: center;
     padding: 20px;
+  }
+
+  .enlaces-menu li a{
+    font-size: large;
   }
 
   .polis {
