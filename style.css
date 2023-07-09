@@ -117,7 +117,7 @@ nav{
     display: block;
     position: absolute;
     top: 25px;
-    right: 25px;
+    left: 380px;
     transition: 0.2s 0.1s;
   }
 
