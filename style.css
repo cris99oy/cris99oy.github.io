@@ -37,7 +37,7 @@ body {
 
 .logo {
   width: auto;
-  height: 96px;
+  height: 100px;
     
 }
 
@@ -110,6 +110,7 @@ nav{
 
   .logo{
     padding-left: 25px;
+    height: 95px;
   }
 
   .ham{
