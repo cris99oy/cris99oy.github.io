@@ -132,7 +132,7 @@ nav{
 
   .enlaces-menu {
     flex-direction: column;
-    justify-content:start;
+    justify-content:center;
     align-items: center;
     
     padding: 0;
