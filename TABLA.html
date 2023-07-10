@@ -1,183 +1,183 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Tabla sincronizada con Google Sheets</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-    }
+<html lang="es">
+  <head>
+    <link rel="stylesheet"
+    href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tabla sincronizada con Google Sheets</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      
+      th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="barra-header"></div>
+    <header class="header">
+      <nav class="navigation">
+        <a href="/">
+          <img class="logo" src="/images/logo.gif">
+        </a>
+        <ul class="enlaces-menu">
+                <li><a href="/">Inicio</a></li>
+                
+                <li><a href="ayuda.html">Ayuda</a></li>
+        </ul>
+        <button class="ham" type="button">
+          <span class="br-1"></span>
+          <span class="br-2"></span>
+          <span class="br-3"></span>
+        </button>
+      </nav>
+    </header>
     
-    th, td {
-      padding: 8px;
-      text-align: left;
-      border-bottom: 1px solid #ddd;
-    }
-    
-    th {
-      background-color: #f2f2f2;
-    }
-  </style>
-  <link rel="stylesheet"
-  href="style.css">
-  <meta charset="utf-8">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6386264592853721"
-          crossorigin="anonymous"></script>
-                  <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1SJWDVFRSC"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-1SJWDVFRSC');
-        </script>
-</head>
-<body>
-  <header class="header">
-    <nav class="navigation">
-      <a href="/">
-        <img class="logo" src="/images/logo.gif">
-      </a>
-      <ul class="enlaces-menu">
-              <li><a href="index.html">Inicio</a></li>
-              <li><a href="TABLA.html">Ayuda</a></li>
-              <li><a href="ayuda.html">Ayuda</a></li>
-      </ul>
-      <button class="ham" type="button">
-        <span class="br-1"></span>
-        <span class="br-2"></span>
-        <span class="br-3"></span>
-      </button>
-    </nav>
-  </header>
-  <main class="main">
-    <div class="container">
-      <div class="cuerpo">
-        <div class="row m-3">
-          <div class="col-12 d-flex justify-content-center btn-group-lg btn-group-horizontal">
-          <a href="?q=XIAOMI" class="btn btn-warning rounded-sm border"><img src="/images/Xiaomi.png" style="max-width:120px;width:100%"></a>
-          <a href="?q=SAMSUNG" class="btn btn-primary rounded-sm border"><img src="/images/samsung.png" style="max-width:120px;width:100%"></a>
-          <a href="?q=HUAWEI" class="btn btn-danger rounded-sm border"><img src="/images/huawei.png" style="max-width:120px;width:100%"></a>
-          <a href="?q=OPPO" class="btn btn-success rounded-sm border"><img src="/images/OPPO.png" style="max-width:120px;width:100%"></a>
-          <a href="?q=VIVO" class="btn btn-info rounded-sm border"><img src="/images/Vivo.png" style="max-width:120px;width:100%"></a>
-          <a href="?q=ZTE" class="btn btn-warning rounded-sm border"><img src="/images/ZTE.png" style="max-width:120px;width:100%"></a>
-          <a href="?q=realme" class="btn btn-primary rounded-sm border"><img src="/images/Realme.png" style="max-width:120px;width:100%"></a>
-          <a href="?q=MOTOROLA" class="btn btn-primary rounded-sm border"><img src="images/motorola.png" style="max-width:120px;width:100%"></a>
-          <a href="?q=LG" class="btn btn-success rounded-sm border"><img src="/images/lg.png" style="max-width:120px;width:100%"></a>
-          <a href="?q=nokia" class="btn btn-dark rounded-sm border"><img src="/images/Nokia.png" style="max-width:120px;width:100%"></a>
-          </div>
-          <div class="col-12 d-flex2 justify-content-center btn-group-lg btn-group-horizontal">
-          
+    <main class="main">
+      <div class="container">
+        <div class="cuerpo">
+          <div class="row m-3">
+            <div class="col-12 d-flex justify-content-center btn-group-lg btn-group-horizontal">
+            <a href="?q=XIAOMI" class="btn btn-warning rounded-sm border"><img src="/images/Xiaomi.png" style="max-width:120px;width:100%"></a>
             <a href="?q=SAMSUNG" class="btn btn-primary rounded-sm border"><img src="/images/samsung.png" style="max-width:120px;width:100%"></a>
-            <a href="?q=MOTOROLA" class="btn btn-primary rounded-sm border"><img src="images/motorola.png" style="max-width:120px;width:100%"></a>
-            <a href="?q=realme" class="btn btn-primary rounded-sm border"><img src="/images/Realme.png" style="max-width:120px;width:100%"></a>
+            <a href="?q=HUAWEI" class="btn btn-danger rounded-sm border"><img src="/images/huawei.png" style="max-width:120px;width:100%"></a>
             <a href="?q=OPPO" class="btn btn-success rounded-sm border"><img src="/images/OPPO.png" style="max-width:120px;width:100%"></a>
             <a href="?q=VIVO" class="btn btn-info rounded-sm border"><img src="/images/Vivo.png" style="max-width:120px;width:100%"></a>
-          
-          </div>
-          <div class="col-12 d-flex2 justify-content-center btn-group-lg btn-group-horizontal">
-            
-            <a href="?q=XIAOMI" class="btn btn-warning rounded-sm border"><img src="/images/Xiaomi.png" style="max-width:120px;width:100%"></a>
-            <a href="?q=HUAWEI" class="btn btn-danger rounded-sm border"><img src="/images/huawei.png" style="max-width:120px;width:100%"></a>
             <a href="?q=ZTE" class="btn btn-warning rounded-sm border"><img src="/images/ZTE.png" style="max-width:120px;width:100%"></a>
+            <a href="?q=realme" class="btn btn-primary rounded-sm border"><img src="/images/Realme.png" style="max-width:120px;width:100%"></a>
+            <a href="?q=MOTOROLA" class="btn btn-primary rounded-sm border"><img src="images/motorola.png" style="max-width:120px;width:100%"></a>
             <a href="?q=LG" class="btn btn-success rounded-sm border"><img src="/images/lg.png" style="max-width:120px;width:100%"></a>
             <a href="?q=nokia" class="btn btn-dark rounded-sm border"><img src="/images/Nokia.png" style="max-width:120px;width:100%"></a>
+            </div>
+            <div class="col-12 d-flex2 justify-content-center btn-group-lg btn-group-horizontal">
+            
+              <a href="?q=SAMSUNG" class="btn btn-primary rounded-sm border"><img src="/images/samsung.png" style="max-width:120px;width:100%"></a>
+              <a href="?q=MOTOROLA" class="btn btn-primary rounded-sm border"><img src="images/motorola.png" style="max-width:120px;width:100%"></a>
+              <a href="?q=realme" class="btn btn-primary rounded-sm border"><img src="/images/Realme.png" style="max-width:120px;width:100%"></a>
+              <a href="?q=OPPO" class="btn btn-success rounded-sm border"><img src="/images/OPPO.png" style="max-width:120px;width:100%"></a>
+              <a href="?q=VIVO" class="btn btn-info rounded-sm border"><img src="/images/Vivo.png" style="max-width:120px;width:100%"></a>
+            
+            </div>
+            <div class="col-12 d-flex2 justify-content-center btn-group-lg btn-group-horizontal">
+              
+              <a href="?q=XIAOMI" class="btn btn-warning rounded-sm border"><img src="/images/Xiaomi.png" style="max-width:120px;width:100%"></a>
+              <a href="?q=HUAWEI" class="btn btn-danger rounded-sm border"><img src="/images/huawei.png" style="max-width:120px;width:100%"></a>
+              <a href="?q=ZTE" class="btn btn-warning rounded-sm border"><img src="/images/ZTE.png" style="max-width:120px;width:100%"></a>
+              <a href="?q=LG" class="btn btn-success rounded-sm border"><img src="/images/lg.png" style="max-width:120px;width:100%"></a>
+              <a href="?q=nokia" class="btn btn-dark rounded-sm border"><img src="/images/Nokia.png" style="max-width:120px;width:100%"></a>
+            </div>
           </div>
         </div>
-      </div>
-      <form method="get">
-        <h3></h3>
-        <div class="form_searchbar">
-          <input class="form_control" type="text" id="search-input" placeholder="Buscar...">
+        <form method="get">
+          <h3></h3>
+          <div class="form_searchbar">
+            <input class="form_control" type="text" id="search-input" placeholder="Buscar...">
+          </div>
+        </form>
+        <div class="cabesa">
+          <table id="tabla-datos"></table>
         </div>
-      </form>
-      <div class="cabesa">
-        <table id="tabla-datos"></table>
       </div>
-    </div>
 
-  </main>
-  <footer class="footer">
-    <div class="container">
-        <p>Copyright © 2023 derechos reservados</p>
-    </div>
-  </footer>
+    </main>
 
-  <script>
-    // ID de la hoja de Google Sheets
-    var sheetId = '1gYYjtuq5ZOEt7lRwI7iXjnD7ZSiPbSsN0h-848-pZDI';
+    <footer class="footer">
+      <div class="container">
+        <div>
+          <p>Copyright © 2023 derechos reservados</p>
+        </div>
+        <div class="polis">
+          <a href="poli_priv.html" target="_blank" rel="noreferrer noopener nofollow" itemprop="url"><span itemprop="name">Política de Privacidad</span></a>
+          <span class="separator">|</span>
+          <a href="poli_cokis.html" target="_blank" rel="noreferrer noopener nofollow" itemprop="url"><span itemprop="name">Política de Cookies</span></a>
+        </div>
+      </div>
+    </footer>
 
-    // Rango de celdas que quieres obtener (por ejemplo, 'Sheet1!A1:D10')
-    var range = 'modelos!B2:M200';
+    <script>
+      // ID de la hoja de Google Sheets
+      var sheetId = '1gYYjtuq5ZOEt7lRwI7iXjnD7ZSiPbSsN0h-848-pZDI';
 
-    // API de Google Sheets
-    var apiKey = 'AIzaSyDO2uPnoBhPzXVzAFFTA2OJou5zyW35VV4';
-    var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values/' + range + '?key=' + apiKey;
+      // Rango de celdas que quieres obtener (por ejemplo, 'Sheet1!A1:D10')
+      var range = 'modelos!B2:M200';
 
-    // Obtener los datos de Google Sheets
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        var table = document.getElementById('tabla-datos');
-        var searchInput = document.getElementById('search-input');
+      // API de Google Sheets
+      var apiKey = 'AIzaSyDO2uPnoBhPzXVzAFFTA2OJou5zyW35VV4';
+      var url = 'https://sheets.googleapis.com/v4/spreadsheets/' + sheetId + '/values/' + range + '?key=' + apiKey;
 
-        // Función para filtrar la tabla basado en la búsqueda
-        function filtrarTabla() {
-          var filtro = searchInput.value.toLowerCase();
-          var rows = table.getElementsByTagName('tr');
+      // Obtener los datos de Google Sheets
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          var table = document.getElementById('tabla-datos');
+          var searchInput = document.getElementById('search-input');
 
-          for (var i = 1; i < rows.length; i++) {
-            var rowData = data.values[i];
-            var row = rows[i];
+          // Función para filtrar la tabla basado en la búsqueda
+          function filtrarTabla() {
+            var filtro = searchInput.value.toLowerCase();
+            var rows = table.getElementsByTagName('tr');
 
-            var encontrado = false;
+            for (var i = 1; i < rows.length; i++) {
+              var rowData = data.values[i];
+              var row = rows[i];
 
-            for (var j = 0; j < rowData.length; j++) {
-              var cellData = rowData[j].toLowerCase();
-              if (cellData.includes(filtro)) {
-                encontrado = true;
-                break;
+              var encontrado = false;
+
+              for (var j = 0; j < rowData.length; j++) {
+                var cellData = rowData[j].toLowerCase();
+                if (cellData.includes(filtro)) {
+                  encontrado = true;
+                  break;
+                }
+              }
+
+              if (encontrado) {
+                row.style.display = '';
+              } else {
+                row.style.display = 'none';
               }
             }
-
-            if (encontrado) {
-              row.style.display = '';
-            } else {
-              row.style.display = 'none';
-            }
           }
-        }
 
-        // Agregar evento de escucha al campo de búsqueda
-        searchInput.addEventListener('input', filtrarTabla);
+          // Agregar evento de escucha al campo de búsqueda
+          searchInput.addEventListener('input', filtrarTabla);
 
-        // Crear la cabecera de la tabla
-        var headerRow = document.createElement('tr');
-        data.values[0].forEach(header => {
-          var th = document.createElement('th');
-          th.textContent = header;
-          headerRow.appendChild(th);
-        });
-        table.appendChild(headerRow);
-
-        // Crear las filas de datos
-        for (var i = 1; i < data.values.length; i++) {
-          var rowData = data.values[i];
-          var row = document.createElement('tr');
-          rowData.forEach(cellData => {
-            var td = document.createElement('td');
-            td.textContent = cellData;
-            row.appendChild(td);
+          // Crear la cabecera de la tabla
+          var headerRow = document.createElement('tr');
+          data.values[0].forEach(header => {
+            var th = document.createElement('th');
+            th.textContent = header;
+            headerRow.appendChild(th);
           });
-          table.appendChild(row);
-        }
-      })
-      .catch(error => {
-        console.error('Error al obtener los datos:', error);
-      });
-  </script>
-  <script src="Menu.js"></script>
-</body>
+          table.appendChild(headerRow);
+
+          // Crear las filas de datos
+          for (var i = 1; i < data.values.length; i++) {
+            var rowData = data.values[i];
+            var row = document.createElement('tr');
+            rowData.forEach(cellData => {
+              var td = document.createElement('td');
+              td.textContent = cellData;
+              row.appendChild(td);
+            });
+            table.appendChild(row);
+          }
+        })
+        .catch(error => {
+          console.error('Error al obtener los datos:', error);
+        });
+    </script>
+    <script src="Menu.js"></script>
+  </body>
 </html>
 
